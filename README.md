@@ -59,11 +59,12 @@ We use crime data categorized by:
     - Use the above command to start the server.
 
 ## Crime Data
-- Data Collection
-- Data Preprocessing
+- **Data Collection**
+- **Data Preprocessing**
   - Imputing missing values
   - Normalizing and scaling features
   - Encoding categorical variables
+
 ![Crime Data](media/crimedataset.png)
 
 ## Machine Learning
@@ -87,9 +88,9 @@ We use crime data categorized by:
     - F1 Score
     - Confusion Matrix
 
-  ![graph](media/graph.png)
-  ![heatmap](media/heatmap.png)
-  ![Algoriths](media/classifieralgorithms.png)
+  ![Graph](media/graph.png)
+  ![Heatmap](media/heatmap.png)
+  ![Classifier Algorithms](media/classifieralgorithms.png)
 
 ## Algorithms
 - **K-Nearest Neighbor Classifier (KNN)**
@@ -111,21 +112,21 @@ We use crime data categorized by:
   - There is no crime
 
 ## Output
-- Home page
-  ![home page](media/crimehomepic.png)
-- Admin page
-  ![admin login](media/crimeadminlognin.png)
-  ![admin home](media/crimeadminhome.png)
-  ![userdetails](media/crimeuserdetails.png)
-- User page
-  ![user login](media/crimeuserlogin.png)
-  ![user home](media/crimeuserhome.png)
-- User registration
-  ![user register form](media/crimeuserregistertion.png)
-- crime prediction
+- **Home Page**
+  ![Home Page](media/crimehomepic.png)
+- **Admin Page**
+  ![Admin Login](media/crimeadminlognin.png)
+  ![Admin Home](media/crimeadminhome.png)
+  ![User Details](media/crimeuserdetails.png)
+- **User Page**
+  ![User Login](media/crimeuserlogin.png)
+  ![User Home](media/crimeuserhome.png)
+- **User Registration**
+  ![User Register Form](media/crimeuserregistertion.png)
+- **Crime Prediction**
   - If there is crime by data given
-    ![crimedata](media/crimedata.png)
-    ![crimepic](media/crimepic.png)
-  - If there is crime by data given
-    ![nocrimedatapic](media/nocrimedatpic.png)
-    ![nocrimepic](media/nocrimepic.png)
+    ![Crime Data](media/crimedata.png)
+    ![Crime Prediction](media/crimepic.png)
+  - If there is no crime by data given
+    ![No Crime Data](media/nocrimedatpic.png)
+    ![No Crime Prediction](media/nocrimepic.png)
