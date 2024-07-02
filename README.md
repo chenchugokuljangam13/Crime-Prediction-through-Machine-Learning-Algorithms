@@ -2,115 +2,115 @@
 
 ## Project Abstract
 Offering a predictive approach for crime occurrences in urban areas by integrating historical events and demographic data into a machine learning framework at the network edge, addressing public safety concerns.
-## Table of Content
-1. [Introduction](#Introduction)
-2. [Data Description](#Data-description)
-3. [Project Structure](#Project-structure)
-4. [Installation](#Installation)
-5. [Machine learning](#ML)
-6. [Algorithms](#Algorithms)
-7. [Output](#Output)
 
-
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Data Description](#data-description)
+3. [Project Structure](#project-structure)
+4. [Installation](#installation)
+5. [Machine Learning](#machine-learning)
+6. [Algorithms](#algorithms)
+7. [Output](#output)
 
 ## Introduction
-- PATTERN IDENTIFICATION : Preventing crimes requires pattern identification.
-- TECHNIQUES : Analytical techniques powered by Machine Learning can helps officers  to identify crimes that most likely to occur.This project Forecasts cancer death cases in India using three algorithms: 
-  - K- Nearest Neighbor Classifier (KNN)
-  - Multi Layer perceptron (MLP)
-  - random forest regression(We found the random forest model performs the best).
-- LAW ENFORCEMENT : Machine Learning algorithms support law enforcement by determining high risk locations.
-- PREDICTIVE POLICING : Innovative approach that empowers law enforcement to enhance public safety measure
+- **Pattern Identification**: Preventing crimes requires pattern identification.
+- **Techniques**: Analytical techniques powered by Machine Learning can help officers identify crimes that are most likely to occur. This project forecasts crime occurrences using three algorithms:
+  - K-Nearest Neighbor Classifier (KNN)
+  - Multi-Layer Perceptron (MLP)
+  - Random Forest Regression (We found the random forest model performs the best).
+- **Law Enforcement**: Machine Learning algorithms support law enforcement by determining high-risk locations.
+- **Predictive Policing**: Innovative approach that empowers law enforcement to enhance public safety measures.
 
 ## Data Description
-We use cancer death case data from the Global Burden of Disease Study, covering the years 1990 to 2017. The data is categorized by:
-- locations where crime occured
+We use crime data categorized by:
+- Locations where crimes occurred
 - Type of crime
-- crime data
+- Crime data
 
-## Project structure
-- Home
-- Admin
+## Project Structure
+- **Home**
+- **Admin**
   - Admin Login
   - Activate/Deactivate Users
   - View Overall Data
   - Manage User Account
-- User
+- **User**
   - User Login
   - User Home
   - User Registration
   - Admin Activation
-- Crime data 
-- [Machine Learning Model Training](#ML)
+- **Crime Data**
+- [**Machine Learning Model Training**](#machine-learning)
   - Crime Data
   - Model Training
   - Training Results
-- crime prediction
-  - input
-  - output
+- **Crime Prediction**
+  - Input
+  - Output
 
 ## Installation
-- install django
-  - pip install django
-- installing requirements.txt
-  - pip install -r requirements.txt
-    - use the above command to install the packages listed in the requirements file.
-- runserver
-  - py manage.py runserver
-    - use the above command to runserver
+- **Install Django**
+  - `pip install django`
+- **Installing requirements.txt**
+  - `pip install -r requirements.txt`
+    - Use the above command to install the packages listed in the requirements file.
+- **Runserver**
+  - `py manage.py runserver`
+    - Use the above command to start the server.
 
 ## Crime Data
-- data collection
-- data preprocessing
-- Imputing missing values
-- Normalizing and scaling features
-- Encoding categorical variables
-![crime Data](media/crimedataset.png)
-## ML
-- Crime Data Analysis
-  - Data Preprocessing
+- Data Collection
+- Data Preprocessing
   - Imputing missing values
   - Normalizing and scaling features
   - Encoding categorical variables
-- Model Training
+![Crime Data](media/crimedataset.png)
+
+## Machine Learning
+- **Crime Data Analysis**
+  - Data Preprocessing
+    - Imputing missing values
+    - Normalizing and scaling features
+    - Encoding categorical variables
+- **Model Training**
   - Splitting the data into training and test sets
-  - Training each model on the training set by algoriths
+  - Training each model on the training set using:
     - Random Forest Classifier
-    - Multi-Layer Perceptron(mlp) Classifier
+    - Multi-Layer Perceptron (MLP) Classifier
     - K-Nearest Neighbors Model (KNN)
-  - Saving the trained models by x1 ansd x2 variables
-- Model Testing
-  -  the testing dataset by the target y variable
-  -  calculated:
-    - accuracy
-    - recall
-    - precision
-    - F1 score
-    - confusion matrix
+  - Saving the trained models
+- **Model Testing**
+  - Using the testing dataset to evaluate:
+    - Accuracy
+    - Recall
+    - Precision
+    - F1 Score
+    - Confusion Matrix
+
   ![graph](media/graph.png)
   ![heatmap](media/heatmap.png)
   ![Algoriths](media/classifieralgorithms.png)
 
 ## Algorithms
-- K- Nearest Neighbor Classifier (KNN)
-  - Algorithm that classifiers data points based one the majority class of  their nearest neighbors in the feature space.
-  - Application in Project :
-    - KNN is utilized to classify crime occurrences based on their similarity to historical events. Categorizing new instance based on their similarity to nearby data points.
-- Random Forest Classifier
-  - Algorithm that constructs multiple decision trees and combines their predictions to improve accuracy and robustness.
-  - Application in Project :
-    - Enhance accuracy by leveraging its ability to handle large datasets, each tree in the forest independently classifies crime data and final prediction based on majority vote.
-- Multi Layer perceptron (MLP)
-  - Refers  to a Neural network that uses Multi-layer Perceptron Classifier. It contains input and output layers connected by multiple hidden layers, allowing for complex pattern recognition.
-  - Application in Project :
-    - By utilizing neural networks, we can capture nonlinear relationship and make accurate predictions about future criminal activities.
+- **K-Nearest Neighbor Classifier (KNN)**
+  - An algorithm that classifies data points based on the majority class of their nearest neighbors in the feature space.
+  - **Application in Project**:
+    - KNN is utilized to classify crime occurrences based on their similarity to historical events, categorizing new instances based on their similarity to nearby data points.
+- **Random Forest Classifier**
+  - An algorithm that constructs multiple decision trees and combines their predictions to improve accuracy and robustness.
+  - **Application in Project**:
+    - Enhances accuracy by leveraging its ability to handle large datasets. Each tree in the forest independently classifies crime data, and the final prediction is based on a majority vote.
+- **Multi-Layer Perceptron (MLP)**
+  - Refers to a neural network that uses a Multi-Layer Perceptron Classifier. It contains input and output layers connected by multiple hidden layers, allowing for complex pattern recognition.
+  - **Application in Project**:
+    - By utilizing neural networks, we can capture nonlinear relationships and make accurate predictions about future criminal activities.
 
-## crime Prediction
-  - by using the given data input the system shows the crime happened or not
-    - there is crime
-    - there is no crime
+## Crime Prediction
+- Using the given data input, the system predicts whether a crime will occur:
+  - There is a crime
+  - There is no crime
 
-## results
+## Output
 - Home page
   ![home page](media/crimehomepic.png)
 - Admin page
