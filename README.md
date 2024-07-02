@@ -65,8 +65,7 @@ We use cancer death case data from the Global Burden of Disease Study, covering 
 - Imputing missing values
 - Normalizing and scaling features
 - Encoding categorical variables
-![Alt text](URL or path to image)
-
+![crime Data](media/crimedataset.png)
 ## ML
 - Crime Data Analysis
   - Data Preprocessing
@@ -111,7 +110,16 @@ We use cancer death case data from the Global Burden of Disease Study, covering 
     - there is crime
     - there is no crime
 
-## Output
+## results
+- Home page
+  - ![home page](media/crimehomepic.png)
+- Admin page
+  - ![admin login](media/crimeadminlogin.png)
+  - ![admin home](media/crimeadminhome.png)
+  - ![userdetails](media/crimeuderdetails.png)
+- User page
+  - ![user login](media/crimeuserlogin.png)
+  - ![user home](media/crimeuserhome.png)
 - If there is crime by data given
   - ![crimedata](media/crimedata.png)
   - ![crimepic](media/crimepic.png)
