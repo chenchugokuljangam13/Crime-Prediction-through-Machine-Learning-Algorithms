@@ -114,9 +114,9 @@ We use cancer death case data from the Global Burden of Disease Study, covering 
 - Home page
   - ![home page](media/crimehomepic.png)
 - Admin page
-  - ![admin login](media/crimeadminlogin.png)
+  - ![admin login](media/crimeadminlognin.png)
   - ![admin home](media/crimeadminhome.png)
-  - ![userdetails](media/crimeuderdetails.png)
+  - ![userdetails](media/crimeuserdetails.png)
 - User page
   - ![user login](media/crimeuserlogin.png)
   - ![user home](media/crimeuserhome.png)
