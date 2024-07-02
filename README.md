@@ -1,8 +1,5 @@
 # Crime Prediction Through Machine Learning
 
-## Project Abstract
-designed a predictive approach for crime occurrences in urban areas by integrating historical events and demographic data into a machine learning framework at the network edge, addressing public safety concerns.
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Data Description](#data-description)
