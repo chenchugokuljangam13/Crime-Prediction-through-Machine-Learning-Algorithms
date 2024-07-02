@@ -1,0 +1,71 @@
+
+{% extends 'users/userbase.html' %}
+{% block contents %}
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+#
+
+
+ <section id="intro">
+
+    <div class="intro-text">
+<!--        <div class="container" style="margin-top:-200px;">-->
+
+      <p><h3 align="center" style="color:green;font-weight:bold;">Classification Results</h3></p>
+      <!--<a href="#about" class="btn-get-started scrollto">Get Started</a>-->
+        
+        <center>
+            <h3>Random ForestClassifier Results</h3>
+        <table>
+
+            <tr><td>Accuracy</td><td>{{Accuracy}}</td> </tr>
+
+            <tr><td>Recall</td><td>{{Recall}}</td> </tr>
+            <tr><td>Precision</td><td>{{Precision}}</td> </tr>
+            <tr><td>F1_Score</td><td>{{F1_Score}}</td> </tr>
+        </table>
+        </center>
+        <center>
+          <table>
+            <h3>MLPClassifier Results</h3>
+            <tr><td>Accuracy</td><td>{{Accuracy1}}</td> </tr>
+
+            <tr><td>Recall</td><td>{{Recall1}}</td> </tr>
+            <tr><td>Precision</td><td>{{Precision1}}</td> </tr>
+            <tr><td>F1_Score</td><td>{{F1_Score1}}</td> </tr>
+          </table>
+        </center>
+        <center>
+          <table>
+            <h3>K-Nearest Neighbors Results</h3>
+            <tr><td>Accuracy</td><td>{{Accuracy2}}</td> </tr>
+
+            <tr><td>Recall</td><td>{{Recall2}}</td> </tr>
+            <tr><td>Precision</td><td>{{Precision2}}</td> </tr>
+            <tr><td>F1_Score</td><td>{{F1_Score2}}</td> </tr>
+          </table>
+        </center>
+    </div>
+  </section>
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,94 @@
+{%extends 'users/userbase.html' %} 
+{% block contents %}
+{% load static %}
+<style>
+    h3 {
+        margin-top: 10%;
+    }
+
+    table {
+        border: 5%;
+        width: 15%;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
+
+    th {
+        background-color: #04AA6D;
+        color: white;
+    }
+</style>
+<center>
+    <h3>Add Information to Test</h3>
+    <form action="{% url 'crimeprediction' %}" method="post" style="width:100%">
+        {% csrf_token %}
+        <h3 style="color: #04AA6D;">{{msg}}</h3>
+        <table class="sm-table">
+            <tr>
+                <td>PrimaryType </td>
+                <td> <select name ="PrimaryType" required>
+                    <option >--Select--</option>
+                    <option value="1">BATTERY</option>
+                    <option value="2"> THEFT</option>
+                    <option value="3"> CRIMINAL</option>
+                    <option value="4"> NARCOTICS</option>
+                    <option value="5"> others</option>
+               </td>
+
+            </tr>
+            <tr>
+                <td>LocationDescription</td>
+                <td> <select name ="LocationDescription" required>
+                    <option >--Select--</option>
+                    <option value="1">STREET</option>
+                    <option value="2"> BAR OR TAVERN</option>
+                    <option value="3"> APARTMENT</option>
+                    <option value="4"> SIDEWALK</option>
+                    <option value="5"> others</option>
+               </td>
+            </tr>
+
+            <tr>
+                <td>District</td>
+                <td><input type = "number" name = "District" required></td>
+            </tr>
+
+            <tr>
+                <td>Ward</td>
+                <td><input type="number" name = "Ward"  required> </td>
+            </tr>
+            <tr>
+                <td>CommunityArea</td>
+                <td> <input type="number" name="CommunityArea" required> </td>
+            </tr>
+            <tr>
+                <td> FBICode</td>
+                <td> <input type="number" name="FBICode" required> </td>
+            </tr>
+            <tr>
+                <td>Latitude</td>
+                <td> <input type="number" name="Latitude" step="0.00000001"> </td>
+            </tr>
+            <tr>
+                <td>Longitude</td>
+                <td> <input type="number" name="Longitude" step="0.00000001"> </td>
+            </tr>
+
+            <tr>
+                <td><button type="submit" value="Register" class="sendmail alignright">Predict</button></td>
+            </tr>
+        </table>
+        
+        
+    </form>
+</center>
+
+{% endblock %}
