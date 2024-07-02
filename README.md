@@ -112,17 +112,20 @@ We use cancer death case data from the Global Burden of Disease Study, covering 
 
 ## results
 - Home page
-  - ![home page](media/crimehomepic.png)
+  ![home page](media/crimehomepic.png)
 - Admin page
-  - ![admin login](media/crimeadminlognin.png)
-  - ![admin home](media/crimeadminhome.png)
-  - ![userdetails](media/crimeuserdetails.png)
+  ![admin login](media/crimeadminlognin.png)
+  ![admin home](media/crimeadminhome.png)
+  ![userdetails](media/crimeuserdetails.png)
 - User page
-  - ![user login](media/crimeuserlogin.png)
-  - ![user home](media/crimeuserhome.png)
-- If there is crime by data given
-  - ![crimedata](media/crimedata.png)
-  - ![crimepic](media/crimepic.png)
-- If there is crime by data given
-  - ![nocrimedatapic](media/nocrimedatpic.png)
-  - ![nocrimepic](media/nocrimepic.png)
+  ![user login](media/crimeuserlogin.png)
+  ![user home](media/crimeuserhome.png)
+- User registration
+  ![user register form](media/crimeuserregistertion.png)
+- crime prediction
+  - If there is crime by data given
+    ![crimedata](media/crimedata.png)
+    ![crimepic](media/crimepic.png)
+  - If there is crime by data given
+    ![nocrimedatapic](media/nocrimedatpic.png)
+    ![nocrimepic](media/nocrimepic.png)
