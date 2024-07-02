@@ -65,6 +65,7 @@ We use cancer death case data from the Global Burden of Disease Study, covering 
 - Imputing missing values
 - Normalizing and scaling features
 - Encoding categorical variables
+![Alt text](URL or path to image)
 
 ## ML
 - Crime Data Analysis
@@ -87,6 +88,9 @@ We use cancer death case data from the Global Burden of Disease Study, covering 
     - precision
     - F1 score
     - confusion matrix
+  ![graph](media/graph.png)
+  ![heatmap](media/heatmap.png)
+  ![Algoriths](media/classifieralgorithms.png)
 
 ## Algorithms
 - K- Nearest Neighbor Classifier (KNN)
@@ -108,4 +112,9 @@ We use cancer death case data from the Global Burden of Disease Study, covering 
     - there is no crime
 
 ## Output
-
+- If there is crime by data given
+  - ![crimedata](media/crimedata.png)
+  - ![crimepic](media/crimepic.png)
+- If there is crime by data given
+  - ![nocrimedatapic](media/nocrimedatpic.png)
+  - ![nocrimepic](media/nocrimepic.png)
