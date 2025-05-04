@@ -67,7 +67,7 @@ def viewData(request):
     import os
     path=os.path.join(settings.MEDIA_ROOT,'chicago_crime_2014.csv')
     df=pd.read_csv(path)
-    df=df.to_html
+    df=df.to_html()
     # path = os.path.join(settings.MEDIA_ROOT,'chicago_crime_2015.csv')
     # auto_df = pd .read_csv(path)
     # auto_df = auto_df.to_html
@@ -97,20 +97,26 @@ def crime_training(request):
     from yellowbrick.classifier import ClassificationReport
     from sklearn import metrics
     import os
-    path=os.path.join(settings.MEDIA_ROOT+'//'+'chicago_crime_2014.csv')
-    path1=os.path.join(settings.MEDIA_ROOT+'//'+'chicago_crime_2015.csv')
-    path2=os.path.join(settings.MEDIA_ROOT+'//'+'chicago_crime_2016.csv')
-    df = pd.concat([pd.read_csv('C:\\Users\\nani\\Desktop\\extracted projects\\Edge_assisted crime_prediction and evaluation framework for machine_learning algorithms\\code\\crimeprediction\\media\\chicago_crime_2014.csv')], ignore_index=True)
-    df = pd.concat([df, pd.read_csv('C:\\Users\\nani\\Desktop\\extracted projects\\Edge_assisted crime_prediction and evaluation framework for machine_learning algorithms\\code\\crimeprediction\\media\\chicago_crime_2015.csv')], ignore_index=True)
-    df = pd.concat([df, pd.read_csv('C:\\Users\\nani\\Desktop\\extracted projects\\Edge_assisted crime_prediction and evaluation framework for machine_learning algorithms\\code\\crimeprediction\\media\\chicago_crime_2016.csv')], ignore_index=True) 
+    # path=os.path.join(settings.MEDIA_ROOT+'//'+'chicago_crime_2014.csv')
+    # path1=os.path.join(settings.MEDIA_ROOT+'//'+'chicago_crime_2015.csv')
+    # path2=os.path.join(settings.MEDIA_ROOT+'//'+'chicago_crime_2016.csv')
+    # df = pd.concat([pd.read_csv('D:\\my_projects\\Crime-Prediction-through-Machine-Learning-Algorithms\\media\\chicago_crime_2014.csv')], ignore_index=True)
+    # df = pd.concat([df, pd.read_csv('D:\\my_projects\\Crime-Prediction-through-Machine-Learning-Algorithms\\media\\chicago_crime_2015.csv')], ignore_index=True)
+    # df = pd.concat([df, pd.read_csv('D:\\my_projects\Crime-Prediction-through-Machine-Learning-Algorithms\\media\\chicago_crime_2016.csv')], ignore_index=True) 
     # df = pd.concat([pd.read_csv(path, error_bad_lines=False)], ignore_index=True)
     # df = pd.concat([df, pd.read_csv(path1, error_bad_lines=False)], ignore_index=True)
     # df = pd.concat([df, pd.read_csv(path2, error_bad_lines=False)], ignore_index=True)
+    file_names = ['chicago_crime_2014.csv', 'chicago_crime_2015.csv', 'chicago_crime_2016.csv']
+    dataframes = []
+    for fname in file_names:
+        path = os.path.join(settings.MEDIA_ROOT, fname)
+        if os.path.exists(path):
+            dataframes.append(pd.read_csv(path))
+    df = pd.concat(dataframes, ignore_index=True)
     df = df.dropna()
     df = df.sample(n=100)
     
-    df = df.drop(['ID'], axis=1)
-    df = df.drop(['Case Number'], axis=1)
+    df = df.drop(['ID', 'Case Number'], axis=1)
     df['Block'] = pd.factorize(df["Block"])[0]
     df['IUCR'] = pd.factorize(df["IUCR"])[0]
     df['Description'] = pd.factorize(df["Description"])[0]
@@ -126,7 +132,7 @@ def crime_training(request):
 
     df.groupby([df['PrimaryType']]).size().sort_values(ascending=True).plot(kind='barh')
 
-    plt.show()
+    # plt.show()
     # First, we sum up the amount of Crime Type happened and select the last 13 classes
     all_classes = df.groupby(['PrimaryType'])['Block'].size().reset_index()
     all_classes['Amt'] = all_classes['Block']
@@ -331,11 +337,11 @@ def crimeprediction(request):
 
         # Prediction
         result = knn_model.predict([float_list])
-        if result==0:
-                msg = "There is crime"
+        if result==1:
+                msg = "There is no crime"
                 return render(request, 'users/prediction.html', {'msg':msg})
-        elif result==1:
-                msg='There is no crime'
+        elif result==0:
+                msg='There is crime'
                 return render (request, 'users/prediction.html', {'msg':msg})
             
         else: 
